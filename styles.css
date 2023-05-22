@@ -21,6 +21,7 @@ form {
     border-radius: 2rem;
     padding: 3rem 5rem;
     display: flex;
+    position: relative;
 }
 
 .title {
@@ -83,6 +84,7 @@ form {
 .checkbox {
     opacity: 0;
     cursor: pointer;
+    z-index: 3;
 }
 
 .checkbox-container {
@@ -131,4 +133,24 @@ button {
     cursor: pointer;
     margin-top: 1rem;
     align-self: self-start;
+}
+
+#character {
+    position: absolute;
+    transform: scale(0.6) translate(-10%, 30%);
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom;
+}
+
+.submitted {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #777474;
+    font-size: 1rem;
+    pointer-events: none;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
 }
